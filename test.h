@@ -3,5 +3,6 @@
 
 void testSimpleLinkedList();
 void testDoubleLinkedList();
+void testCircularLinkedList();
 
 #endif

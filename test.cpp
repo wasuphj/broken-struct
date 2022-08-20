@@ -1,5 +1,6 @@
 #include "./List/SimpleLinkedList.h"
 #include "./List/DoubleLinkedList.h"
+#include "./List/CircularLinkedList.h"
 
 #include <iostream>
 using namespace std;
@@ -74,4 +75,40 @@ void testDoubleLinkedList() {
 	// 1 2 6 5 3 4 
     
     cout << "--- DoubleLinkedList 테스트 종료 ---" << "\n";
+}
+
+void testCircularLinkedList() {
+    int T = 0;
+
+	// CircularLinkedList 테스트 코드
+    cout << "--- CircularLinkedList 테스트 시작 ---" << "\n";
+	CircularLinkedList<int> cll;
+
+	// 삽입
+	cout << T++ << ": " << "예상: " << "0x1234" << ", 실제: " << cll.createNode(1) << "\n";
+	cout << T++ << ": " << "예상: " << "0x1234" << ", 실제: " << cll.createNode(2) << "\n";
+	cout << T++ << ": " << "예상: " << "0x1234" << ", 실제: " << cll.createNode(3) << "\n";
+	cout << T++ << ": " << "예상: " << "0x1234" << ", 실제: " << cll.createNode(4) << "\n";
+	cout << T++ << ": " << "예상: " << "0x1234" << ", 실제: " << cll.appendNode(1, 5) << "\n";
+	cout << T++ << ": " << "예상: " << "0x1234" << ", 실제: " << cll.appendNode(1, 6) << "\n";
+	
+	// 카운트
+	cout << T++ << ": " << "예상: " << "6" << ", 실제: " << cll.getSize() << "\n";
+
+	// 삭제
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << cll.removeNode(2) << "\n";
+
+	// 카운트
+	cout << T++ << ": " << "예상: " << "5" << ", 실제: " << cll.getSize() << "\n";
+
+	// 조회
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << cll.getNode(0)->data << "\n";
+	cout << T++ << ": " << "예상: " << "2" << ", 실제: " << cll.getNode(1)->data << "\n";
+	cout << T++ << ": " << "예상: " << "5" << ", 실제: " << cll.getNode(2)->data << "\n";
+	cout << T++ << ": " << "예상: " << "3" << ", 실제: " << cll.getNode(3)->data << "\n";
+	cout << T++ << ": " << "예상: " << "4" << ", 실제: " << cll.getNode(4)->data << "\n";
+	//cout << T++ << ": " << "예상: " << "4" << ", 실제: " << cll.getNode(5)->data << "\n";
+	// 1 2 6 5 3 4 
+    
+    cout << "--- CircularLinkedList 테스트 종료 ---" << "\n";
 }
