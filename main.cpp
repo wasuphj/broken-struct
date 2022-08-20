@@ -5,6 +5,8 @@ int main() {
 	testSimpleLinkedList();
 	testDoubleLinkedList();
 	testCircularLinkedList();
+	
+	testArrayStack();
 
 	return 0;
 }

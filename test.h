@@ -5,4 +5,6 @@ void testSimpleLinkedList();
 void testDoubleLinkedList();
 void testCircularLinkedList();
 
+void testArrayStack();
+
 #endif

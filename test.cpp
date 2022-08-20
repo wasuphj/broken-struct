@@ -1,6 +1,7 @@
 #include "./List/SimpleLinkedList.h"
 #include "./List/DoubleLinkedList.h"
 #include "./List/CircularLinkedList.h"
+#include "./Stack/ArrayStack.h"
 
 #include <iostream>
 using namespace std;
@@ -111,4 +112,48 @@ void testCircularLinkedList() {
 	// 1 2 6 5 3 4 
     
     cout << "--- CircularLinkedList 테스트 종료 ---" << "\n";
+}
+
+void testArrayStack() {
+    int T = 0;
+
+	// CircularLinkedList 테스트 코드
+    cout << "--- ArrayStack 테스트 시작 ---" << "\n";
+	ArrayStack<int> as = ArrayStack<int>(3);
+
+	// 빈 상태
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.isEmpty() << "\n";
+
+	// 할당량
+	cout << T++ << ": " << "예상: " << "3" << ", 실제: " << as.getCapacity() << "\n";
+
+	// 삽입
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.push(1) << "\n";
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.push(2) << "\n";
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.push(3) << "\n";
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.push(4) << "\n";
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.push(5) << "\n";
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.push(6) << "\n";
+
+	// 할당량
+	cout << T++ << ": " << "예상: " << "6" << ", 실제: " << as.getCapacity() << "\n";
+
+	// 카운트
+	cout << T++ << ": " << "예상: " << "6" << ", 실제: " << as.getSize() << "\n";
+
+	// 빈 상태
+	cout << T++ << ": " << "예상: " << "0" << ", 실제: " << as.isEmpty() << "\n";
+
+	// 조회
+	cout << T++ << ": " << "예상: " << "6" << ", 실제: " << as.pop() << "\n";
+	cout << T++ << ": " << "예상: " << "5" << ", 실제: " << as.pop() << "\n";
+	cout << T++ << ": " << "예상: " << "4" << ", 실제: " << as.pop() << "\n";
+	cout << T++ << ": " << "예상: " << "3" << ", 실제: " << as.pop() << "\n";
+	cout << T++ << ": " << "예상: " << "2" << ", 실제: " << as.pop() << "\n";
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.pop() << "\n";
+
+	// 빈 상태
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.isEmpty() << "\n";
+    
+    cout << "--- ArrayStack 테스트 종료 ---" << "\n";
 }
