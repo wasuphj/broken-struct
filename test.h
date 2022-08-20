@@ -6,5 +6,6 @@ void testDoubleLinkedList();
 void testCircularLinkedList();
 
 void testArrayStack();
+void testLinkedListStack();
 
 #endif

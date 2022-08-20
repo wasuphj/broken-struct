@@ -9,8 +9,9 @@ LIB_SIMPLE_LINKED_LIST=./List/SimpleLinkedList.h ./List/SimpleLinkedList.hpp
 LIB_DOUBLE_LINKED_LIST=./List/DoubleLinkedList.h ./List/DoubleLinkedList.hpp
 LIB_CIRCULAR_LINKED_LIST=./List/CircularLinkedList.h ./List/CircularLinkedList.hpp
 
-LIB_STACK=$(LIB_ARRAY_STACK)
+LIB_STACK=$(LIB_ARRAY_STACK) $(LIB_LINKED_LIST_STACK)
 LIB_ARRAY_STACK=./Stack/ArrayStack.h ./Stack/ArrayStack.hpp
+LIB_LINKED_LIST_STACK=./Stack/LinkedListStack.h ./Stack/LinkedListStack.hpp
 
 all: $(TARGET)
 

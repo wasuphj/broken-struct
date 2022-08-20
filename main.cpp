@@ -7,6 +7,7 @@ int main() {
 	testCircularLinkedList();
 	
 	testArrayStack();
+	testLinkedListStack();
 
 	return 0;
 }
