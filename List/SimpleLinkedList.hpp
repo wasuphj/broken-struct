@@ -15,6 +15,7 @@ typename SimpleLinkedList<T>::Node* SimpleLinkedList<T>::createNode(T data) {
 template <typename T>
 typename SimpleLinkedList<T>::Node* SimpleLinkedList<T>::getNode(int idx) {
     if (!head) return NULL;
+    if (idx < 0) return NULL;
     if (idx >= size) return NULL;
 
     Node* targetNode = head;
@@ -45,11 +46,9 @@ int SimpleLinkedList<T>::removeNode(int idx) {
     if (idx < 0) return 0;
 
     Node* targetNode = head;
-
-    if (idx > 0) {
-        Node* prevNode = getNode(idx - 1);
-        if (!prevNode) return 0;
-
+    
+    Node* prevNode = getNode(idx - 1);
+    if (prevNode) {
         targetNode = prevNode->next;
         prevNode->next = targetNode->next;
     }
