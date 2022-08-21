@@ -9,5 +9,6 @@ void testArrayStack();
 void testLinkedListStack();
 
 void testCircularQueue();
+void testLinkedQueue();
 
 #endif

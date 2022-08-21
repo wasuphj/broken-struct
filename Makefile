@@ -13,8 +13,9 @@ LIB_STACK=$(LIB_ARRAY_STACK) $(LIB_LINKED_LIST_STACK)
 LIB_ARRAY_STACK=./Stack/ArrayStack.h ./Stack/ArrayStack.hpp
 LIB_LINKED_LIST_STACK=./Stack/LinkedListStack.h ./Stack/LinkedListStack.hpp
 
-LIB_QUEUE=$(LIB_CIRCULAR_QUEUE)
+LIB_QUEUE=$(LIB_CIRCULAR_QUEUE) $(LIB_LINKED_QUEUE)
 LIB_CIRCULAR_QUEUE=./Queue/CircularQueue.h ./Queue/CircularQueue.hpp
+LIB_LINKED_QUEUE=./Queue/LinkedQueue.h ./Queue/LinkedQueue.hpp
 
 all: $(TARGET)
 

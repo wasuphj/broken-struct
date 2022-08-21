@@ -4,6 +4,7 @@
 #include "./Stack/ArrayStack.h"
 #include "./Stack/LinkedListStack.h"
 #include "./Queue/CircularQueue.h"
+#include "./Queue/LinkedQueue.h"
 
 #include <iostream>
 using namespace std;
@@ -242,4 +243,44 @@ void testCircularQueue() {
 	cout << T++ << ": " << "예상: " << "true" << ", 실제: " << cq.isEmpty() << "\n";
 
     cout << "--- CircularQueue 테스트 종료 ---" << "\n";
+}
+
+void testLinkedQueue() {
+    int T = 0;
+
+	// LinkedQueue 테스트 코드
+    cout << "--- LinkedQueue 테스트 시작 ---" << "\n";
+	LinkedQueue<int> lq;
+
+	// 빈 상태
+	cout << T++ << ": " << "예상: " << "true" << ", 실제: " << lq.isEmpty() << "\n";
+
+	// 삽입
+	cout << T++ << ": " << "예상: " << "true" << ", 실제: " << lq.enqueue(1) << "\n";
+	cout << T++ << ": " << "예상: " << "true" << ", 실제: " << lq.enqueue(2) << "\n";
+	cout << T++ << ": " << "예상: " << "true" << ", 실제: " << lq.enqueue(3) << "\n";
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << lq.dequeue()->data << "\n";
+	cout << T++ << ": " << "예상: " << "2" << ", 실제: " << lq.dequeue()->data << "\n";
+	cout << T++ << ": " << "예상: " << "true" << ", 실제: " << lq.enqueue(4) << "\n";
+	cout << T++ << ": " << "예상: " << "true" << ", 실제: " << lq.enqueue(5) << "\n";
+	cout << T++ << ": " << "예상: " << "true" << ", 실제: " << lq.enqueue(6) << "\n";
+
+	// 카운트
+	cout << T++ << ": " << "예상: " << "4" << ", 실제: " << lq.getSize() << "\n";
+
+	// 빈 상태
+	cout << T++ << ": " << "예상: " << "false" << ", 실제: " << lq.isEmpty() << "\n";
+
+	// 조회
+	//cout << T++ << ": " << "예상: " << "1" << ", 실제: " << lq.dequeue() << "\n";
+	//cout << T++ << ": " << "예상: " << "2" << ", 실제: " << lq.dequeue() << "\n";
+	cout << T++ << ": " << "예상: " << "3" << ", 실제: " << lq.dequeue()->data << "\n";
+	cout << T++ << ": " << "예상: " << "4" << ", 실제: " << lq.dequeue()->data << "\n";
+	cout << T++ << ": " << "예상: " << "5" << ", 실제: " << lq.dequeue()->data << "\n";
+	cout << T++ << ": " << "예상: " << "6" << ", 실제: " << lq.dequeue()->data << "\n";
+
+	// 빈 상태
+	cout << T++ << ": " << "예상: " << "true" << ", 실제: " << lq.isEmpty() << "\n";
+
+    cout << "--- LinkedQueue 테스트 종료 ---" << "\n";
 }

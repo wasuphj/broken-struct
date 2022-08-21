@@ -10,6 +10,7 @@ int main() {
 	testLinkedListStack();
 
 	testCircularQueue();
+	testLinkedQueue();
 
 	return 0;
 }
