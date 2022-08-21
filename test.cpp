@@ -118,7 +118,7 @@ void testCircularLinkedList() {
 void testArrayStack() {
     int T = 0;
 
-	// CircularLinkedList 테스트 코드
+	// ArrayStack 테스트 코드
     cout << "--- ArrayStack 테스트 시작 ---" << "\n";
 	ArrayStack<int> as = ArrayStack<int>(3);
 
@@ -162,37 +162,37 @@ void testArrayStack() {
 void testLinkedListStack() {
     int T = 0;
 
-	// CircularLinkedList 테스트 코드
+	// LinkedListStack 테스트 코드
     cout << "--- LinkedListStack 테스트 시작 ---" << "\n";
-	LinkedListStack<int> as;
+	LinkedListStack<int> lls;
 
 	// 빈 상태
-	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.isEmpty() << "\n";
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << lls.isEmpty() << "\n";
 
 	// 삽입
-	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.push(1) << "\n";
-	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.push(2) << "\n";
-	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.push(3) << "\n";
-	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.push(4) << "\n";
-	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.push(5) << "\n";
-	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.push(6) << "\n";
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << lls.push(1) << "\n";
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << lls.push(2) << "\n";
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << lls.push(3) << "\n";
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << lls.push(4) << "\n";
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << lls.push(5) << "\n";
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << lls.push(6) << "\n";
 
 	// 카운트
-	cout << T++ << ": " << "예상: " << "6" << ", 실제: " << as.getSize() << "\n";
+	cout << T++ << ": " << "예상: " << "6" << ", 실제: " << lls.getSize() << "\n";
 
 	// 빈 상태
-	cout << T++ << ": " << "예상: " << "0" << ", 실제: " << as.isEmpty() << "\n";
+	cout << T++ << ": " << "예상: " << "0" << ", 실제: " << lls.isEmpty() << "\n";
 
 	// 조회
-	cout << T++ << ": " << "예상: " << "6" << ", 실제: " << as.pop()->data << "\n";
-	cout << T++ << ": " << "예상: " << "5" << ", 실제: " << as.pop()->data << "\n";
-	cout << T++ << ": " << "예상: " << "4" << ", 실제: " << as.pop()->data << "\n";
-	cout << T++ << ": " << "예상: " << "3" << ", 실제: " << as.pop()->data << "\n";
-	cout << T++ << ": " << "예상: " << "2" << ", 실제: " << as.pop()->data << "\n";
-	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.pop()->data << "\n";
+	cout << T++ << ": " << "예상: " << "6" << ", 실제: " << lls.pop()->data << "\n";
+	cout << T++ << ": " << "예상: " << "5" << ", 실제: " << lls.pop()->data << "\n";
+	cout << T++ << ": " << "예상: " << "4" << ", 실제: " << lls.pop()->data << "\n";
+	cout << T++ << ": " << "예상: " << "3" << ", 실제: " << lls.pop()->data << "\n";
+	cout << T++ << ": " << "예상: " << "2" << ", 실제: " << lls.pop()->data << "\n";
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << lls.pop()->data << "\n";
 
 	// 빈 상태
-	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << as.isEmpty() << "\n";
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << lls.isEmpty() << "\n";
     
     cout << "--- LinkedListStack 테스트 종료 ---" << "\n";
 }
