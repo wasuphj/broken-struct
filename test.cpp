@@ -3,6 +3,7 @@
 #include "./List/CircularLinkedList.h"
 #include "./Stack/ArrayStack.h"
 #include "./Stack/LinkedListStack.h"
+#include "./Queue/CircularQueue.h"
 
 #include <iostream>
 using namespace std;
@@ -195,4 +196,50 @@ void testLinkedListStack() {
 	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << lls.isEmpty() << "\n";
     
     cout << "--- LinkedListStack 테스트 종료 ---" << "\n";
+}
+
+void testCircularQueue() {
+    int T = 0;
+
+	// CircularQueue 테스트 코드
+    cout << "--- CircularQueue 테스트 시작 ---" << "\n";
+	CircularQueue<int> cq = CircularQueue<int>(3);
+
+	// 빈 상태
+	cout << T++ << ": " << "예상: " << "true" << ", 실제: " << cq.isEmpty() << "\n";
+
+	// 찬 상태
+	cout << T++ << ": " << "예상: " << "false" << ", 실제: " << cq.isFull() << "\n";
+
+	// 삽입
+	cout << T++ << ": " << "예상: " << "true" << ", 실제: " << cq.enqueue(1) << "\n";
+	cout << T++ << ": " << "예상: " << "true" << ", 실제: " << cq.enqueue(2) << "\n";
+	cout << T++ << ": " << "예상: " << "true" << ", 실제: " << cq.enqueue(3) << "\n";
+	cout << T++ << ": " << "예상: " << "1" << ", 실제: " << cq.dequeue() << "\n";
+	cout << T++ << ": " << "예상: " << "2" << ", 실제: " << cq.dequeue() << "\n";
+	cout << T++ << ": " << "예상: " << "true" << ", 실제: " << cq.enqueue(4) << "\n";
+	cout << T++ << ": " << "예상: " << "true" << ", 실제: " << cq.enqueue(5) << "\n";
+	cout << T++ << ": " << "예상: " << "false" << ", 실제: " << cq.enqueue(6) << "\n";
+
+	// 카운트
+	cout << T++ << ": " << "예상: " << "3" << ", 실제: " << cq.getSize() << "\n";
+
+	// 빈 상태
+	cout << T++ << ": " << "예상: " << "false" << ", 실제: " << cq.isEmpty() << "\n";
+
+	// 찬 상태
+	cout << T++ << ": " << "예상: " << "true" << ", 실제: " << cq.isFull() << "\n";
+
+	// 조회
+	//cout << T++ << ": " << "예상: " << "1" << ", 실제: " << cq.dequeue() << "\n";
+	//cout << T++ << ": " << "예상: " << "2" << ", 실제: " << cq.dequeue() << "\n";
+	cout << T++ << ": " << "예상: " << "3" << ", 실제: " << cq.dequeue() << "\n";
+	cout << T++ << ": " << "예상: " << "4" << ", 실제: " << cq.dequeue() << "\n";
+	cout << T++ << ": " << "예상: " << "5" << ", 실제: " << cq.dequeue() << "\n";
+	cout << T++ << ": " << "예상: " << "NULL" << ", 실제: " << cq.dequeue() << "\n";
+
+	// 빈 상태
+	cout << T++ << ": " << "예상: " << "true" << ", 실제: " << cq.isEmpty() << "\n";
+
+    cout << "--- CircularQueue 테스트 종료 ---" << "\n";
 }

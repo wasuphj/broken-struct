@@ -9,5 +9,7 @@ int main() {
 	testArrayStack();
 	testLinkedListStack();
 
+	testCircularQueue();
+
 	return 0;
 }

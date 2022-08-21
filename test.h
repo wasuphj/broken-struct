@@ -8,4 +8,6 @@ void testCircularLinkedList();
 void testArrayStack();
 void testLinkedListStack();
 
+void testCircularQueue();
+
 #endif
